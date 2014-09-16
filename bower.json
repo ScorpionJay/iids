@@ -1,0 +1,25 @@
+{
+  "name": "mars",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ScorpionJay/Mars",
+  "authors": [
+    "jay <jay.wang.scorpion@gmail.com>"
+  ],
+  "description": "js lib",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "angularjs": "~1.2.24",
+    "requirejs": "~2.1.15",
+    "ui-bootstrap": "~0.11.0",
+    "angular-route": "~1.2.24"
+  }
+}
