@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello Mars</title>
+		<style type="text/css">
+			.container{
+				height: 800px;
+				background:
+					radial-gradient(
+						760px 80% at center 0px, 
+						rgba(254, 254, 254,0.6) 0%, rgba(255, 241, 220,0.7) 50%, rgba(255, 255, 255,0.8) 60%, 
+						rgba(240, 216, 168,0.9) 60%,
+						rgba(247, 222, 174,0) 61%), 
+					radial-gradient(
+						760px 600px at center 110%,
+						rgba(254, 254, 254,0.6) 0%, rgba(255, 241, 220,0.7) 50%, rgba(255, 255, 255,0.8) 60%,
+						rgba(240, 216, 168,0.9) 60%,
+						rgba(247, 222, 174,0) 61%),
+					radial-gradient(ellipse at center top, #fefefe 0, #f7deae 88%, #f5ad73 100%)		
+				;	
+			}
+
+			#home-menu{
+				width:100%;
+				height:768px;
+				position:absolute;
+				top:0px;
+				overflow: hidden;
+			}
+			#home-menu ul{
+				list-style: none;
+			}
+
+			#home-menu ul li{
+				position: absolute;
+			}
+
+			#home-menu ul li>a{
+				width:160px;
+				height:160px;
+				border-radius: 50%;
+				overflow: hidden;
+				display: inline-block;
+				border:8px solid #ccc;
+				box-shadow: 0px 2px 5px #666;
+				box-sizing:content-box;
+
+			}
+			#home-menu ul li>a:active,
+			#home-menu ul li>a:hover{
+				border:8px solid #f87732;
+				/*margin:-3px 0 0 -3px;*/
+			}
+			#home-menu ul li>a>img{
+				width:100%;
+			}
+			</style>
+	</head>
+	<body>
+	<div class="container">
+	<div id="home-menu">
+	<ul class="top">
+		<li>
+			<a href="">
+				<img src="img/home1.png" alt=""/>				
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="img/home2.png" alt=""/>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="img/home3.png" alt=""/>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="img/home4.png" alt=""/>
+			</a>
+		</li>
+	</ul>
+	
+	<ul class="bottom">
+		<li>
+			<a href="">
+				<img src="img/home5.png" alt=""/>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="img/home6.png" alt=""/>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="img/home7.png" alt=""/>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="img/home8.png" alt=""/>
+			</a>
+		</li>
+	</ul>
+	
+</div>
+	</div>
+	</body>
+
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<script type="text/javascript">
+		var $hm=$('#home-menu');
+	var $icon=$('>ul>li>a:first',$hm);
+	var ricon=$icon.width()/2;
+	var cicon=4;
+	var r=535;
+	var c={x:$hm.width()/ 2-ricon,y:-(ricon+250)};
+	var isTop=false;
+	
+	var $li=null;
+	var rad=0;
+	$('>ul',$hm).each(function(){
+		var $ul=$(this);
+		var pos=$ul.attr('class').match(/\b(top|middle|bottom)\b/i).pop();
+		isTop=$(this).is('.top');
+		
+		$li=$('>li',$(this));
+		switch(pos){
+			case 'top':c.y=-(ricon+200);break;
+			case 'middle':c.y=(ricon+150);r=210;break;
+			case 'bottom':c.y=$hm.height()+220;break;
+		}
+		
+		
+		$li.each(function(i){
+			var $this=$(this);
+			switch(pos){
+				case 'top':rad=Math.PI*(1+0.26)+Math.PI*3/5*(i/cicon);break;
+				case 'middle':rad=Math.PI*i/2;r=(i%2)?210:240;break
+				case 'bottom':rad=Math.PI*(1-0.26)-Math.PI*3/5*(i/cicon);break;
+			}
+			
+			$this.css({
+				left: c.x+Math.cos(rad)*r,
+				top: c.y-Math.sin(rad)*r
+			});
+		});
+	});
+
+	</script>
+
+</html>

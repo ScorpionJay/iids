@@ -2,17 +2,19 @@
 <html>
 	<head>
 		<title>Hello Mars</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body>
-
+	<div class="container">
 		<h3 ref="#~/view2" style="color:red">This is Mars</h3>
 		<a href="#~/index">index</a>
 		<a href="#~/view1">view1</a>
 		<a href="#~/view2">view2</a>
 
 		<div ng-view></div>
+	</div>
 	</body>
 
-	<script src="./js/lib/requirejs/require.js" data-main="./js/config"></script>
+	<script src="vender/requirejs/require.js" data-main="./js/config"></script>
 
 </html>

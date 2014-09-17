@@ -1,12 +1,13 @@
 require.config({
 
-	baseUrl:'./js/lib',
+	baseUrl:'.',
 
 	paths:{
-		'jquery': 'jquery/jquery',
-		'bootstrap': 'bootstrap/bootstrap',
-		'angular' : 'angularjs/angular',
-		'route':'angular-route/angular-route'
+		'jquery': 'vender/jquery/jquery',
+		'bootstrap': 'vender/bootstrap/bootstrap',
+		'angular' : 'vender/angularjs/angular',
+		'route':'vender/angular-route/angular-route',
+		'domReady':'vender/domReady'
 	},
 
 	shim:{
@@ -20,8 +21,11 @@ require.config({
 
 });
 
-require(['angular','route','../app','jquery'],function (app) {
+require(['domReady','angular','js/app','jquery'],function (domReady) {
 
-	angular.bootstrap(document,['app']);
+	// 启动angular
+	domReady(function(){
+		angular.bootstrap(document,['App']);
+	})
 
 })
