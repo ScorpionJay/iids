@@ -1,9 +1,11 @@
-define(['angular',"route"],function(){
+define(['angular',"route",
+	'js/controller/controller',
+	'js/directive/directive'],function(e){
 
 	'use strict';
 
 	// 定义app模块
-	var appModule = angular.module('App', ['ngRoute']);
+	var appModule = angular.module('App', ['ngRoute','helloControllerModule','helloDirectiveModule']);
 
 	// app模块配置
 	appModule.config(['$routeProvider','$locationProvider',
@@ -16,6 +18,7 @@ define(['angular',"route"],function(){
 						"/view1",
 						{
 							templateUrl : "./js/view/view1.html",
+							controller : 'HelloCtrl',
 							reloadOnSearch : false
 						}
 				)
