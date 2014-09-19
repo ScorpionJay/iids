@@ -24,3 +24,9 @@ controller directive
 		}
 	});
 
+
+
++++++++
+ajax
+angular-resource
+service.js
