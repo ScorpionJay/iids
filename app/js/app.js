@@ -1,7 +1,7 @@
 define(['angular',"route",
 	'js/controller/controller',
 	'js/directive/directive',
-	'js/controller/service'],function(e){
+	'js/service/service'],function(e){
 
 	'use strict';
 
