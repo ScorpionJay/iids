@@ -7,6 +7,7 @@ require.config({
 		'bootstrap': 'vender/bootstrap/bootstrap',
 		'angular' : 'vender/angularjs/angular',
 		'route':'vender/angular-route/angular-route',
+		'resource':'vender/angular-resource',
 		'domReady':'vender/domReady'
 	},
 
@@ -15,6 +16,9 @@ require.config({
 			deps:['jquery']
 		},
 		"route":{
+      		deps:['angular']  		
+  		},
+  		"resource":{
       		deps:['angular']  		
   		}
 	}
