@@ -1,0 +1,19 @@
+/* common */
+body {
+	/*background-color: rgba(93, 85, 85, 0.38);*/
+}
+.container {
+	padding: 10px;
+}
+
+nav {
+	text-align: center;
+}
+nav>a {
+	color:red;
+	line-height: 29px;
+	background-color: black;
+	width: 38%;
+	font-size: 30px;
+}
+

@@ -7,17 +7,23 @@
 	<body>
 	<div class="container">
 
-		<div style="background:red;width:100px; height:100px; background-image:url(img/test.jpg);background-size:100%;background-repeat:no-repeat">1</div>
-
-
-		<h3 ref="#~/view2" style="color:red">This is Mars</h3>
-		<a href="#~/index">index</a>
-		<a href="#~/view1">view1</a>
-		<a href="#~/view2">view2</a>
+		<div>
+			<div style="width:100px; height:100px; background-image:url(img/test.jpg);background-size:100%;background-repeat:no-repeat;border-radius:100%;display: inline-block;"></div>
+			<h3 ref="#~/view2" style="color:red;display: inline-block;">This is Mars</h3>
+		</div>	
+			
+		<nav>
+			<a href="#~/index">Home</a>
+			<a href="#~/view1">Chart</a>
+			<a href="#~/view2">Menu2</a>
+			<a href="#~/view1">Menu3</a>
+			<a href="#~/view2">Menu4</a>
+			<a href="#~/view1">Menu5</a>
+			<a href="#~/view2">Menu6</a>
+			
+		</nav>
 
 		<div ng-view></div>
-
-		test
 
 	</div>
 	</body>

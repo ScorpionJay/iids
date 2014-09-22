@@ -8,7 +8,8 @@ require.config({
 		'angular' : 'vender/angularjs/angular',
 		'route':'vender/angular-route/angular-route',
 		'resource':'vender/angular-resource',
-		'domReady':'vender/domReady'
+		'domReady':'vender/domReady',
+		'echarts':'vender/echarts/echarts-plain'
 	},
 
 	shim:{
