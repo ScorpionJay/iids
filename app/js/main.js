@@ -9,7 +9,8 @@ require.config({
 		'route':'vender/angular-route/angular-route',
 		'resource':'vender/angular-resource',
 		'domReady':'vender/domReady',
-		'echarts':'vender/echarts/echarts-plain'
+		'echarts':'vender/echarts/echarts-plain',
+		'nicescroll':'vender/nicescroll/jquery.nicescroll'
 	},
 
 	shim:{
@@ -26,11 +27,17 @@ require.config({
 
 });
 
-require(['domReady','angular','js/app','jquery'],function (domReady) {
+require(['domReady','angular','js/app','jquery','bootstrap','nicescroll'],function (domReady) {
 
 	// start angular
-	//domReady(function(){
+	domReady(function(){
 		angular.bootstrap(document,['App']);
-	//})
+		// carousel
+		$('.carousel').carousel();
+		// scroll
+		$("html").niceScroll({cursorcolor:"#F00",cursoropacitymax:0.7,boxzoom:false,touchbehavior:false});
+	})
+
+	
 
 })
