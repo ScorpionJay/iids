@@ -1,14 +1,14 @@
 define(['angular',"route",
 	'js/controller/controller',
 	'js/directive/directive',
-	'js/service/service','js/controller/chartCtrl'],function(e){
+	'js/service/service','js/controller/chartCtrl'],function(){
 
 	'use strict';
 
-	// 定义app模块
+	// define app module
 	var appModule = angular.module('App', ['ngRoute','httpService','helloControllerModule','helloDirectiveModule','chartCtrlModule']);
 
-	// app模块配置
+	// app module config
 	appModule.config(['$routeProvider','$locationProvider',
 		function($routeProvider,$locationProvider) {
 

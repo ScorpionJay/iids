@@ -28,9 +28,9 @@ require.config({
 
 require(['domReady','angular','js/app','jquery'],function (domReady) {
 
-	// 启动angular
-	domReady(function(){
+	// start angular
+	//domReady(function(){
 		angular.bootstrap(document,['App']);
-	})
+	//})
 
 })
